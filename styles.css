@@ -1,1 +1,69 @@
-/*  your css code here. If applicable */
+body {
+    background-color: #eeeeee;
+}
+
+.block-heading h2 {
+    color: #3b99e0 !important; /* Bootstrap text-primary overrides */
+}
+
+.summary {
+    border-top-color: #5ea4f3 !important;
+    background-color: #f7fbff !important;
+}
+
+.product {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.product img {
+    width: 100px;
+    border-radius: 8px;
+}
+
+.product-details {
+    flex-grow: 1;
+}
+
+.product-details a {
+    color: #3b99e0;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.25rem;
+    text-decoration: none;
+}
+
+.product-details small {
+    display: block;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.quantity-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quantity-label {
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+}
+
+.quantity-input {
+    width: 70px;
+    text-align: center;
+}
+
+.price {
+    margin-left: 20px;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
