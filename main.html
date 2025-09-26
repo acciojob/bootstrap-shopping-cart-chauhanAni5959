@@ -1,43 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Shopping Cart</title>
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Bootstrap Shopping Cart</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
-<body>
-  <div class="container my-5">
-    <div class="block-heading">
-      <h2 class="text-center text-primary">Shopping cart</h2>
-      <p class="text-center text-secondary">
-        The customer is very important, the customer will be followed by the customer. Now, as an urn, I
-        have no right to be in possession of property.
-      </p>
-    </div>
-    <div class="row">
-      <div class="col-lg-8" id="product-list"></div>
-      <div class="col-lg-4">
-        <div class="summary p-4 rounded bg-light border-top border-primary">
-          <h5 class="text-primary mb-4 text-center">Summary</h5>
-          <div class="d-flex justify-content-between mb-3"><span>Subtotal</span><span id="subtotal">$0</span></div>
-          <div class="d-flex justify-content-between mb-3"><span>Discount</span><span id="discount">$0</span></div>
-          <div class="d-flex justify-content-between mb-3"><span>Shipping</span><span id="shipping">$0</span></div>
-          <hr />
-          <div class="d-flex justify-content-between fw-bold fs-5">
-            <span>Total</span>
-            <span id="total">$0</span>
+<body style="background:#f4f4f4;">
+
+  <!-- Block Heading -->
+  <div class="block-heading text-center my-5">
+    <h2 class="font-weight-bold mb-3" style="color:#3b99e0;">Shopping cart</h2>
+    <p class="mx-auto" style="max-width:450px;">
+      The customer is very important, the customer will be followed by the customer. Now, as an urn, I have no right to be in possession of property.
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <!-- Products -->
+      <div class="col-lg-8">
+        <div class="bg-white rounded mb-3 p-3">
+          <div class="product row align-items-center no-gutters py-3">
+            <div class="col-auto pr-4">
+              <img class="img-fluid" src="https://www.apple.com/v/iphone/home/aj/images/overview/compare/compare_iphone_12__f4jz8mz9nz2a_large_2x.png" alt="Product" width="80"/>
+            </div>
+            <div class="col">
+              <a href="#" class="font-weight-bold" style="color:#3b99e0; text-decoration:none;">I am very sorry</a>
+              <div class="text-muted small">Display: 5 inches<br>RAM: 4GB<br>Memory: 32GB</div>
+            </div>
+            <div class="col-auto text-right">
+              <span class="mr-2">Quantity:</span>
+              <input type="number" min="0" class="form-control d-inline-block" style="width:55px;"/>
+            </div>
+            <div class="col-auto pl-4 text-right">
+              <span class="font-weight-bold" style="font-size:1.25rem;">$120</span>
+            </div>
           </div>
-          <button class="btn btn-primary w-100 mt-4" type="button">checkout</button>
+          <hr class="my-0">
+          <div class="product row align-items-center no-gutters py-3">
+            <div class="col-auto pr-4">
+              <img class="img-fluid" src="https://www.apple.com/v/iphone/home/aj/images/overview/compare/compare_iphone_12__f4jz8mz9nz2a_large_2x.png" alt="Product" width="80"/>
+            </div>
+            <div class="col">
+              <a href="#" class="font-weight-bold" style="color:#3b99e0; text-decoration:none;">I am very sorry</a>
+              <div class="text-muted small">Display: 5 inches<br>RAM: 4GB<br>Memory: 32GB</div>
+            </div>
+            <div class="col-auto text-right">
+              <span class="mr-2">Quantity:</span>
+              <input type="number" min="0" value="1" class="form-control d-inline-block" style="width:55px;"/>
+            </div>
+            <div class="col-auto pl-4 text-right">
+              <span class="font-weight-bold" style="font-size:1.25rem;">$120</span>
+            </div>
+          </div>
+          <hr class="my-0">
+          <div class="product row align-items-center no-gutters py-3">
+            <div class="col-auto pr-4">
+              <img class="img-fluid" src="https://www.apple.com/v/iphone/home/aj/images/overview/compare/compare_iphone_12__f4jz8mz9nz2a_large_2x.png" alt="Product" width="80"/>
+            </div>
+            <div class="col">
+              <a href="#" class="font-weight-bold" style="color:#3b99e0; text-decoration:none;">I am very sorry</a>
+              <div class="text-muted small">Display: 5 inches<br>RAM: 4GB<br>Memory: 32GB</div>
+            </div>
+            <div class="col-auto text-right">
+              <span class="mr-2">Quantity:</span>
+              <input type="number" min="0" value="1" class="form-control d-inline-block" style="width:55px;"/>
+            </div>
+            <div class="col-auto pl-4 text-right">
+              <span class="font-weight-bold" style="font-size:1.25rem;">$120</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Summary -->
+      <div class="col-lg-4">
+        <div class="summary border-top" style="border-top: 3px solid #5ea4f3; background:#f7fbff; border-radius:8px; padding:30px 24px;">
+          <h4 class="font-weight-bold text-center mb-4">Summary</h4>
+          <div class="d-flex justify-content-between py-1">
+            <span class="text-muted">Subtotal</span><span>$360</span>
+          </div>
+          <div class="d-flex justify-content-between py-1">
+            <span class="text-muted">Discount</span><span>$0</span>
+          </div>
+          <div class="d-flex justify-content-between py-1">
+            <span class="text-muted">Shipping</span><span>$0</span>
+          </div>
+          <hr>
+          <div class="d-flex justify-content-between py-2">
+            <span class="font-weight-bold">Total</span>
+            <span class="font-weight-bold" style="color:#3b99e0;">$360</span>
+          </div>
+          <button type="button" class="btn btn-block mt-3 font-weight-bold" style="background:#3b99e0; color:#fff; font-size:1.1rem; border-radius:6px;">checkout</button>
         </div>
       </div>
     </div>
   </div>
-
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
